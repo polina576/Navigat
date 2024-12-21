@@ -1,0 +1,27 @@
+﻿<Window x:Class="Stranic_navigat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Stranic_navigat"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800"  
+        WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="363*"/>
+            <RowDefinition Height="42*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="2" Background="RosyBrown" />
+        <Frame Name="MainFrame" Margin="0,79,0,10" Grid.RowSpan="2" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden"/>
+        <Border Background="#FFF5EFD0">
+            <TextBlock Text="Header" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="Medium" />
+
+        </Border>
+        <Image Source="/image/flow.png" HorizontalAlignment="Left" Margin="10,0,0,0" Width="62"/>
+        <Button x:Name="btnBack" Content="Back"  HorizontalAlignment="Left" Margin="642,0,0,0" VerticalAlignment="Center" Width="130" Height="25" Click="btnBack_Click"/>
+
+    </Grid>
+
+</Window>
